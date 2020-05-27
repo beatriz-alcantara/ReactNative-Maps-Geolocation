@@ -27,7 +27,7 @@ import MapView, { Marker } from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
 
 
-const App: () => React$Node = () => {
+const App = () => {
   const [minhaLocalizacao, setMinhaLocalizacao] = useState({
     latitude: 37.78825,
     longitude: -122.4324,
