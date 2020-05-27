@@ -44,6 +44,14 @@ ext {
   // playServicesLocationVersion = "17.0.0"
 }
 ```
+
+#### Gerando a chave de API Google Maps
+
+Para realizar esta etapa você precisa ter uma conta no google e precisa acessar o seguinte [endereço](https://cloud.google.com/console/google/maps-apis/overview)
+
+Você deve logar com a sua conta do google. Após o login a seguinte tela será apresentada para você
+
+
 ### react-native-geolocation-service
 
 Instalamos o pacote com o comando:
