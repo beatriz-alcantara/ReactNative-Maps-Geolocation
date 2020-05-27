@@ -68,10 +68,9 @@ const App = () => {
     <>
       <MapView
         region={minhaLocalizacao}
-        style={{ width: 400, height: 500}}
+        style={{ width: 360, height: 570}}
         showsUserLocation={true}
         showsMyLocationButton={true}
-        moveOnMarkerPress={true}
         onPress={(position) => getLocalizacao(position.nativeEvent)}
       >
         <Marker
