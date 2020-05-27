@@ -1,4 +1,4 @@
-# React Native com mapa e geolocalização
+# React Native com mapa e geolocalização (Aplicativo Android)
 
 ## Tecnologias utilizadas
 - React Native
