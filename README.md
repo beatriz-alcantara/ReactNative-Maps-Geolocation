@@ -141,7 +141,7 @@ const App = () => {
       <>
       <MapView
         region={minhaLocalizacao}
-        style={{ width: 400, height: 500}}
+        style={{ width: 360, height: 570}}
         showsUserLocation={true}
         onPress={(position) => getLocalizacao(position.nativeEvent)}
       />
@@ -153,7 +153,9 @@ const App = () => {
 
 Com isso temos um mapa que marca a sua localização inicial.
 
-Se você tirar o atributo `style={{ width: 400, height: 500}}` talvez o mapa não apareça.
+![mapa-inicial](imagens/mapa-inicial.png)
+
+Se você tirar o atributo `{{ width: 360, height: 570}}` talvez o mapa não apareça.
 
 Podemos também inserir marcadores no mapa utilizando o componente Marker do pacote `react-native-maps`. E utilizar o atributo `onPress` do componente MapView para pegar a localização de onde a pessoa clicou no mapa.
 
@@ -184,5 +186,9 @@ O atributo coordinate do componente Marker deve receber um objeto assim:
    longitude: Number
 }
 ```
+
+Com esse pedaço de código você pode clicar em um ponto qualquer do mapa e ele será marcado como na imagem a seguir
+
+![mapa marcado](imagens/mapa-marcador.png)
 
 Dado este tutorial agora você terá uma base para inserir mapas no seu aplicativo android.
