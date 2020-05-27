@@ -51,6 +51,30 @@ Para realizar esta etapa você precisa ter uma conta no google e precisa acessar
 
 Você deve logar com a sua conta do google. Após o login a seguinte tela será apresentada para você
 
+![tela inicial](imagens/primeira-tela-google.png)
+
+Aceite os termos e continue.
+
+Selecione a opção **API** no menu lateral e crie um novo projeto, digite o nome do seu projeto
+
+![terceira tela](imagens/terceira-tela-google.png)
+
+Após criar o seu projeto a seguinte tela será apresentada. Nesse dashboard selecione a opção **Maps SDK for Android** e clique no botão ativar
+
+![quarta tela](imagens/quarta-tela-google.png)
+
+Após esse passo você deve selecionar a opção **Credenciais** no menu lateral e clicar em *Credenciais em APIs e serviços*
+
+![setima tela](imagens/setima-tela-google.png)
+
+Isso te levará para essa tela onde você irá clicar em **CRIAR CREDENCIAIS**
+
+![oitava tela](imagens/oitava-tela-google.png)
+
+E logo será criada a sua chave de API
+
+![nona tela](imagens/nona-tela-google.png)
+
 
 ### react-native-geolocation-service
 
@@ -100,7 +124,9 @@ useEffect(() => {
 
 Os parâmetros do método `getCurrentPosition(sucesso(), erro(), opções)`
 
-Para utilizar a localização obtida vamos usar o component MapView do pacote `react-native-maps`
+Como estou escrevendo os componentes como funções tive que usar o `useEffect()`, e para que ele execute apenas uma vez é preciso passar um array vazio para que ele se comporte como se estivesse no metodo `componentDidMount`. [Referência da documentação](https://pt-br.reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects)
+
+Para utilizar a localização obtida vamos usar o component MapView do pacote `react-native-maps` para renderizar o nosso mapa
 
 
 ``` javascript
@@ -127,6 +153,32 @@ Com isso temos um mapa que marca a sua localização inicial.
 
 Se você tirar o atributo `style={{ width: 400, height: 500}}` talvez o mapa não apareça.
 
+Podemos também inserir marcadores no mapa utilizando o componente Marker do pacote `react-native-maps`. E utilizar o atributo `onPress` do componente MapView para pegar a localização de onde a pessoa clicou no mapa.
 
+```javascript
+import MapView, { Marker } from 'react-native-maps';
 
+<>
+      <MapView
+        region={minhaLocalizacao}
+        style={{ width: 400, height: 500}}
+        showsUserLocation={true}
+        showsMyLocationButton={true}
+        moveOnMarkerPress={true}
+        onPress={(position) => getLocalizacao(position.nativeEvent)}
+      >
+        <Marker
+          coordinate={posicaoMarcador}
+        />
+      </MapView>
+    </>
+```
 
+O atributo coordinate do componente Marker deve receber um objeto assim:
+
+```javascript
+{
+   latitude: Number,
+   longitude: Number
+}
+```
