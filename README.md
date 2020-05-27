@@ -153,7 +153,7 @@ const App = () => {
 
 Com isso temos um mapa que marca a sua localização inicial.
 
-![mapa-inicial](imagens/mapa-inicial.png)
+<img src="imagens/mapa-inicial.png" width="250px" height="500px"/>
 
 Se você tirar o atributo `{{ width: 360, height: 570}}` talvez o mapa não apareça.
 
@@ -189,6 +189,6 @@ O atributo coordinate do componente Marker deve receber um objeto assim:
 
 Com esse pedaço de código você pode clicar em um ponto qualquer do mapa e ele será marcado como na imagem a seguir
 
-![mapa marcado](imagens/mapa-marcador.png)
+<img src="imagens/mapa-marcador.png" width="250px" height="500px"/>
 
 Dado este tutorial agora você terá uma base para inserir mapas no seu aplicativo android.
