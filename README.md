@@ -27,7 +27,9 @@ Devemos adicionar o seguinte código em `android/app/src/main/AndroidManifest.xm
 </application>
 ```
 
-Para as versões do react native superior ou igual a 0.60 não é preciso realizar o seguinte passo:
+Para as versões do react native inferiores a 0.60 deve ser realizado o seguinte passo:
+
+> Caso a sua versão seja superior ou igual a 0.60 esse passo torna-se desnecessário
 
 Arquivo: build.gradle
 
@@ -182,3 +184,5 @@ O atributo coordinate do componente Marker deve receber um objeto assim:
    longitude: Number
 }
 ```
+
+Dado este tutorial agora você terá uma base para inserir mapas no seu aplicativo android.
